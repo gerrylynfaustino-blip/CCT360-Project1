@@ -1,0 +1,433 @@
+/*Design Tokens */
+:root {
+    --peach: #F5D19A;
+    --teal: #86C8CD;
+    --purple: #C5A7E8;
+    --pink: #F5D1ED;
+    --lavender: #CDD2FF;
+    --blue-button: #2864ED;
+    --purple-button: #8860C2;
+    --text-color: #253047;
+    --white: #FFFFFF;
+}
+
+/* Global Styles */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1440px;
+    background-color: var(--white);
+    color: var(--text-color);
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+}
+
+p {
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*Header - Flexbox */
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--peach);
+    padding: 20px 30px;
+    margin-bottom: 20px;
+}
+
+.site-header h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.site-header nav {
+    display: flex;
+    gap: 15px;
+}
+
+.site-header nav a {
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.site-header nav a:hover {
+    text-decoration: underline;
+}
+
+/*Buttons*/
+
+.button {
+    display: inline-block;
+    background-color: var(--blue-button);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.button:hover {
+    background-color: #1648B8;
+}
+
+.purple-button {
+    background-color: var(--purple-button);
+}
+
+.purple-button:hover {
+    background-color: #7049A9;
+}
+
+/*Homepage Hero CSS Grid*/
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.hero-main {
+    background-color: var(--teal);
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.hero-main h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.hero-main p {
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.hero-main .button {
+    margin-top: auto;
+}
+
+.hero-about {
+    background-color: var(--purple);
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-about h2 {
+    font-size: 24px;
+}
+
+.hero-about p {
+    margin-bottom: 25px;
+}
+
+.hero-about .button {
+    margin-top: auto;
+}
+
+/*Project Gallery*/
+
+.projects-section {
+    margin-bottom: 20px;
+}
+
+.projects-section h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.cards-gallery {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/*Project Cards - Flexbox*/
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--pink);
+    padding: 15px;
+    text-align: center;
+    min-width: 0;
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    background-color: white;
+}
+
+.card h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.card .button {
+    margin-top: auto;
+    align-self: center;
+}
+
+/*Case Study Intro*/
+
+.detail-hero {
+    background-color: var(--teal);
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.detail-hero h1 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.detail-hero p {
+    max-width: 650px;
+    margin-bottom: 0;
+}
+
+/*Case Study - CSS Grid*/
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.project-overview {
+    background-color: var(--pink);
+    padding: 25px;
+    min-width: 0;
+}
+
+.project-overview h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+/*Project Overview Content*/
+
+.overview-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+}
+
+.overview-content img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    align-self: start;
+}
+
+.overview-text h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.overview-text p {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/*Project Info Sidebar*/
+
+.project-info {
+    background-color: var(--lavender);
+    padding: 25px;
+}
+
+.project-info h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.project-info p {
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+/*Footer*/
+
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--peach);
+    padding: 15px 20px;
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-links a {
+    color: var(--text-color);
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design - Mobile*/
+
+@media (max-width: 767px) {
+
+    body {
+        padding: 10px;
+    }
+
+    /* Header */
+    .site-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .site-header h2 {
+        font-size: 20px;
+    }
+
+    .site-header nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .site-header nav a {
+        font-size: 13px;
+    }
+
+    /* Homepage Hero */
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .hero-main {
+        padding: 25px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-main h1 {
+        font-size: 28px;
+    }
+
+    .hero-about {
+        padding: 25px;
+    }
+
+    /* Project Gallery */
+
+    .projects-section h2 {
+        text-align: center;
+        font-size: 26px;
+    }
+
+    .cards-gallery {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .card img {
+        height: 200px;
+    }
+
+    /* Case Study */
+
+    .detail-hero {
+        padding: 25px;
+        text-align: center;
+    }
+
+    .detail-hero h1 {
+        font-size: 25px;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .overview-content {
+        grid-template-columns: 1fr;
+    }
+
+    .project-overview {
+        padding: 20px;
+    }
+
+    .project-overview h2 {
+        text-align: center;
+    }
+
+    .overview-content img {
+        max-width: 100%;
+    }
+
+    .project-info {
+        padding: 20px;
+    }
+
+    /* Footer */
+
+    .site-footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .footer-links {
+        justify-content: center;
+    }
+
+}
